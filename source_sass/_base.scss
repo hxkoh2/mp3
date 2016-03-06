@@ -32,7 +32,8 @@ a, a:hover, a:link, a:visited, a:active, a:focus {
 .movie-list {
 	background-color: $list-color;
 	border-bottom: 1px solid $header-color;
-
+	border-top: 1px solid $header-color;
+	
 	img {
 		width: 100%;
 		margin: 5px;
