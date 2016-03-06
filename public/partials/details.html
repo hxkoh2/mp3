@@ -1,0 +1,28 @@
+<div ng-controller="detailsController">
+	<div class="row">
+		<div class="small-1 columns">
+			<a href="/#/details/{{movie.rank-1}}" ng-show="movie.rank>1"><i class="fa fa-arrow-circle-left fa-2x left ng-click=previous()"></i></a>
+		</div>
+		<div class="small-1 columns">
+			<a href="/#/details/{{movie.rank-1}}" ng-show="movie.rank==1"><i class="fa fa-2x"></i></a>
+		</div>
+		<div class="small-10 columns details">
+			<h2>{{movie.title}}</h2>
+			<p class="accent2">Rank: {{movie.rank}}</h2>
+			<div class="row">
+				<div class="medium-3 columns">
+					<img ng-src="data/images/{{movie.imdbID}}.jpg"/>
+				</div>
+				<div class="medium-9 columns">
+					<p>{{movie.plot}}<p>
+					<p>Released: {{movie.released}}<p>
+					<p>Runtime: {{movie.runtime}}<p>
+					<p>Awards: {{movie.awards}}<p>
+				</div>
+			</div>
+  		</div>
+  		<div class="small-1 columns">
+			<a href="/#/details/{{movie.rank+1}}" ng-show="movie.rank<250"><i class="fa fa-arrow-circle-right fa-2x right ng-click=next()"></i></a>
+		</div>
+	</div>
+</div>

@@ -1,1 +1,90 @@
 // Add any custom Sass & CSS here
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+h1 {
+	text-align: center;
+	font-family: $font-primary;
+	color: $header-color;
+}
+
+button, p {
+	font-family: $font-primary;
+}
+
+h2, h3{
+	color: $header-color;
+	font-family: $font-primary;
+}
+
+
+a, a:hover, a:link, a:visited, a:active, a:focus {
+	text-decoration: none;
+	font-family: $font-primary;
+	font-weight: bold;
+
+	&.space {
+		margin: 20px;
+		display: inline-block;
+		color: $accent;
+	}
+}
+
+.movie-list {
+	background-color: $list-color;
+	border-bottom: 1px solid $header-color;
+
+	img {
+		width: 100%;
+		margin: 5px;
+	}
+}
+
+.details {
+	background-color: #8DB6C2;
+
+	img {
+		width: 100%;
+		padding-bottom: 10px;
+	}
+}
+
+.left {
+	float: right;
+}
+
+.right {
+	float: left;
+}
+
+
+button {
+	padding: 5px;
+	background-color: $button-color;
+	margin: 10px;
+}
+
+form {
+	padding: 30px;
+	font-family: $font-primary;
+}
+
+.form-background {
+	background-color: $form-color;
+}
+
+i {
+	color: $header-color;
+}
+
+.accent2 {
+	color: $accent2;
+	font-weight: bold;
+}
+
+.enlarge {
+	@include enlarge;
+}
+
+.enlarge:hover {
+	transform: scale(1.1);
+}

@@ -1,0 +1,25 @@
+<div ng-controller="galleryController">
+	<div class="row">
+		<div class="medium-12 columns text-center">
+			<button ng-click="genre = 'All'">All</button>
+			<button ng-click="genre = 'Action'">Action</button>
+			<button ng-click="genre = 'Adventure'">Adventure</button>
+			<button ng-click="genre = 'Crime'">Crime</button>
+			<button ng-click="genre = 'Comedy'">Comedy</button>
+			<button ng-click="genre = 'Drama'">Drama</button>
+			<button ng-click="genre = 'Musical'">Musical</button>
+			<button ng-click="genre = 'Mystery'">Mystery</button>
+			<button ng-click="genre = 'Romance'">Romance</button>
+			<button ng-click="genre = 'Sci-Fi'">Sci-Fi</button>
+			<button ng-click="genre = 'Thriller'">Thriller</button>
+			<button ng-click="genre = 'Western'">Western</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-up-2 medium-up-6 large-up-8">
+			<div ng-repeat="movie in filteredMovies" class="column">
+				<a href="#/details/{{movie.rank}}"><img class="enlarge" ng-src="data/images/{{movie.imdbID}}.jpg" /></a>
+			</div>
+		</div>
+	</div>
+</div>

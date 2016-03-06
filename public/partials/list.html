@@ -1,0 +1,46 @@
+<div ng-controller="listController">
+	<div class="row">
+		<div class="medium-8 medium-offset-2 columns form-background">
+			<form>
+				<div class="row">
+					<div class="medium-12 columns">
+						<label>
+							<input type="text" ng-model="filterString" placeholder="Search for movies">
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="medium-12 columns">
+						<label>Sort By:
+						  <select ng-model="orderBy">
+						    <option value="title">Title</option>
+						    <option value="rank">Rank</option>
+						  </select>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<fieldset class="medium-12 columns" id="listOrder">
+					    <input type="radio" name="order" value="Ascending" id="listAscending" checked="checked" ng-model="ascending"><label for="listAscending">Ascending</label>
+					    <input type="radio" name="order" value="Descending" id="listDescending" ng-model="ascending"><label for="listDescending">Descending</label>
+					</fieldset>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row" ng-repeat="movie in filteredMovies">
+		<a href="#/details/{{movie.rank}}">
+		<div class="medium-8 medium-offset-2 columns movie-list enlarge" ng-click="selectMovie()">
+			<div class="row">
+				<div class="medium-2 columns">
+					<img ng-src="data/images/{{movie.imdbID}}.jpg"/>
+				</div>
+				<div class="medium-10 columns">
+					<h3>{{movie.title}}</h3>
+					<p class="accent2">Rank: {{movie.rank}}</p>
+				</div>
+			</div>
+		</div>
+		</a>
+	</div>
+</div>
