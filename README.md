@@ -24,3 +24,9 @@ You can leave this command running in the background while development for liver
 ```bash
 grunt
 ```
+## Sources
+http://foundation.zurb.com/forum/posts/37335-overloading-a-row-with-columns
+https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/
+https://docs.angularjs.org/api/ng/filter/filter
+https://code.angularjs.org/1.3.13/docs/api/ng/filter/orderBy
+http://foundation.zurb.com/sites/docs/forms.html
